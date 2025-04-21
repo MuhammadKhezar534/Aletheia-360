@@ -2,11 +2,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { WORDS } from "../mock-data/mock";
 import gsap from "gsap";
+import useModalContext from "../hooks/useModalContext";
 
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const bannerRef = useRef<HTMLDivElement>(null);
   const verseRef = useRef<HTMLDivElement>(null);
+  const { setIsModalOpen } = useModalContext();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -55,7 +57,7 @@ const Banner = () => {
           className="mb-8"
         >
           <h2 className="text-2xl md:text-3xl font-light text-yellow-300 mb-2">
-            Welcome to Our Community
+            Welcome to Aletheia 360
           </h2>
           <h1 className="text-4xl md:text-6xl font-bold text-white">
             Experience God's <span className="text-yellow-300">Love</span> and{" "}
@@ -137,8 +139,11 @@ const Banner = () => {
           transition={{ delay: 1 }}
           className="mt-16"
         >
-          <button className="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
-            Join Our Community Today
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Contact Us
           </button>
         </motion.div>
       </div>

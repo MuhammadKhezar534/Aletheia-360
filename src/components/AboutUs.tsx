@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { beliefs } from "../mock-data/mock";
+import useModalContext from "../hooks/useModalContext";
 
 const AboutUsPage = () => {
+  const { setIsModalOpen } = useModalContext();
+
   return (
     <div className="bg-blue-950 text-white">
       <div
@@ -43,6 +46,7 @@ const AboutUsPage = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setIsModalOpen(true)}
               className="px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg transition-all"
             >
               Contact Us

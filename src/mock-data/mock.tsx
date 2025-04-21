@@ -87,35 +87,35 @@ export const planItems = [
     icon: <FaSeedling className="text-4xl" />,
     content:
       "God created everything we see—our universe, our world, and all living things. At the heart of it all, God designed us for a close relationship with Him and with each other. He intended for us to experience purpose, peace, and wholeness in every part of life.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
   },
   {
     title: "Our Brokenness",
     icon: <FaHeartBroken className="text-4xl" />,
     content:
       "Although God's plan was for us to live in harmony with Him, we often choose our own way instead. The Bible calls this sin, but you can think of it as our tendency to ignore God's guidance or break His moral laws. This causes hurt, injustice, and separation—from God, from one another, and from the peace He wants for us.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
   },
   {
     title: "The Promise of a Saviour",
     icon: <FaCross className="text-4xl" />,
     content:
       "Even from the moment things went wrong, God began hinting at His rescue plan—a promise to heal what was broken. Throughout history, God spoke through prophets, letting people know He would send someone to save us from our wrongdoings and restore our relationship with Him.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
   },
   {
     title: "The Cross & Resurrection",
     icon: <FaChurch className="text-4xl" />,
     content:
       "That promise became reality through Jesus Christ, who is fully God and fully human. Jesus lived a life without sin, showing us God's love in action. He then died on a cross to pay for our wrongs—taking on the penalty we deserved. Three days later, He rose from the dead, proving His power over sin and death.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
   },
   {
     title: "Responding to God's Invitation",
     icon: <FaHandsHelping className="text-4xl" />,
     content:
       "God doesn't force us to accept His gift. Each of us has a choice: Keep living life on our own terms, hoping our good deeds or efforts will be enough, or turn to God, admit our need for His forgiveness, and trust in Jesus' death and resurrection to make us right with Him.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
   },
 ];
 
@@ -152,14 +152,14 @@ export const testimonies = [
     title: "Sarah's Story",
     synopsis:
       "Sarah grew up without any real knowledge of God. When she hit rock bottom—facing loss and uncertainty—she discovered a neighbor's simple act of kindness could change everything. Hear how she found genuine peace and a new family in Christ.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
   },
   {
     name: "John",
     title: "John's Story",
     synopsis:
       "John spent years feeling empty despite worldly 'success.' A chance invitation to a Bible study opened his eyes to a God who meets us where we are. Listen in as John shares how trusting Jesus filled the hole in his heart he didn't even know he had.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
     reverse: true,
   },
   {
@@ -167,14 +167,14 @@ export const testimonies = [
     title: "Maria's Story",
     synopsis:
       "Maria always felt she had to earn love and approval. When she learned about the grace and forgiveness Jesus offers, she experienced freedom from guilt and shame for the first time. Watch her journey toward hope and a fresh start.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
   },
   {
     name: "David",
     title: "David's Story",
     synopsis:
       "When a serious health scare rocked David's world, he began questioning life's meaning and his own mortality. Discover how an encounter with Jesus brought him an unshakeable peace and a sense of purpose that changed everything.",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "fpTstq4ZS6U",
     reverse: true,
   },
 ];

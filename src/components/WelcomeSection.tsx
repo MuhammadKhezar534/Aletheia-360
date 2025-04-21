@@ -1,8 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import useModalContext from "../hooks/useModalContext";
 
 const WelcomeSection = () => {
   const controls = useAnimation();
+  const { setIsModalOpen } = useModalContext();
 
   useEffect(() => {
     const sequence = async () => {
@@ -103,7 +105,12 @@ const WelcomeSection = () => {
             }}
             className="px-10 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold rounded-full text-lg relative overflow-hidden"
           >
-            <span className="relative z-10">Contact Us</span>
+            <span
+              className="relative z-10"
+              onClick={() => setIsModalOpen(true)}
+            >
+              Contact Us
+            </span>
             <motion.div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 hover:opacity-100 transition-opacity duration-300" />
           </motion.button>
         </motion.div>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaCross } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import useModalContext from "../hooks/useModalContext";
 
 interface link {
   name: string;
@@ -11,7 +12,7 @@ interface link {
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
-
+  const { setIsModalOpen } = useModalContext();
   const navigate = useNavigate();
 
   const links = [
@@ -32,7 +33,7 @@ const Navbar = () => {
       initial={false}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed w-full top-0 left-0 z-50 px-4 py-3 backdrop-blur-md bg-black bg-opacity-50 border-b border-yellow-500 border-opacity-20"
+      className="fixed w-full top-0 left-0 z-50 px-4 py-3 backdrop-blur-md bg-black border-b border-yellow-500 border-opacity-20"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <motion.div
@@ -88,18 +89,19 @@ const Navbar = () => {
               boxShadow: "0 0 15px rgba(255, 214, 0, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setIsModalOpen(true)}
             className="px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-all"
           >
             Contact Us
           </motion.button>
         </div>
 
-        <motion.button
+        {/* <motion.button
           className="md:hidden text-white text-2xl"
           whileTap={{ scale: 0.9 }}
         >
           ☰
-        </motion.button>
+        </motion.button> */}
       </div>
     </motion.nav>
   );

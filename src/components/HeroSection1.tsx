@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const HeroSection = () => {
+interface Props {
+  onScrollClick: () => void;
+}
+
+const HeroSection = ({ onScrollClick }: Props) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const words = ["Hope", "Healing", "Purpose", "Redemption", "Faith", "Love"];
 
-  // Rotate through words
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prev) => (prev + 1) % words.length);
     }, 2000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -63,6 +67,7 @@ const HeroSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={onScrollClick}
             className="px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg transition-all"
           >
             Watch Stories

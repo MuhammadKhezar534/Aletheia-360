@@ -4,11 +4,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import useModalContext from "../hooks/useModalContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PrayerContactSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { setIsModalOpen } = useModalContext();
 
   useGSAP(
     () => {
@@ -85,6 +87,7 @@ const PrayerContactSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setIsModalOpen(true)}
             className="px-8 py-3 bg-yellow-500 text-black font-semibold rounded-lg"
           >
             Contact Us
