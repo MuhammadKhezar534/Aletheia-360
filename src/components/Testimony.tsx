@@ -119,7 +119,7 @@ const Testimony = ({
           className={`testimony-video-${name} flex-1 w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl`}
         >
           <iframe
-            className="w-full h-full h-[270px]"
+            className="w-full h-[270px]"
             src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`}
             title={`${name}'s Testimony`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

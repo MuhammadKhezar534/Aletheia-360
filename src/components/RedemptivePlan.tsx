@@ -109,7 +109,7 @@ const RedemptivePlan = () => {
                   className="aspect-video bg-black rounded-xl overflow-hidden shadow-xl"
                 >
                   <iframe
-                    className="w-full h-full h-[300px]"
+                    className="w-full h-[300px]"
                     src={`https://www.youtube.com/embed/${item.videoId}?modestbranding=1&rel=0`}
                     title={item.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
