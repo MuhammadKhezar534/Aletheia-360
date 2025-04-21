@@ -10,7 +10,7 @@ const LifeWithGod = () => {
       viewport={{ once: true }}
       className="py-24 px-4 bg-gradient-to-b from-purple-900/20 via-indigo-900/30 to-blue-900/20"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ const LifeWithGod = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-1xl md:text-3xl font-bold text-white mb-6">
             <AnimatedGlowText text="Life with God & Next Steps" />
           </h2>
           <motion.p
@@ -30,7 +30,7 @@ const LifeWithGod = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-md text-gray-300 max-w-3xl mx-auto"
           >
             This journey isn't meant to be walked alone. God is with you, and He
             often works through other people to help you grow in faith and love.
@@ -61,7 +61,7 @@ const LifeWithGod = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="h-full bg-gray-900 bg-opacity-70 backdrop-blur-sm p-8 rounded-xl border border-white border-opacity-10 overflow-hidden"
+                className="h-full bg-gray-900 bg-opacity-70 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-10 overflow-hidden"
               >
                 <div className="flex items-start gap-6 relative z-10">
                   <motion.div
@@ -89,10 +89,10 @@ const LifeWithGod = () => {
                     </motion.div>
                   </motion.div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
+                    <h3 className="text-xl font-bold text-white mb-4">
                       <AnimatedUnderlineText text={step.title} />
                     </h3>
-                    <p className="text-gray-300">{step.description}</p>
+                    <p className="text-gray-300 text-sm">{step.description}</p>
                   </div>
                 </div>
                 <motion.div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -124,7 +124,7 @@ const LifeWithGod = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="px-12 py-5 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-400 bg-size-200 text-black font-bold rounded-full text-xl relative overflow-hidden"
+            className="px-8 py-3 bg-gradient-to-r text-md from-yellow-400 via-amber-500 to-yellow-400 bg-size-200 text-black font-bold rounded-full text-xl relative cursor-pointer overflow-hidden"
             style={{
               backgroundSize: "200% 100%",
             }}

@@ -7,8 +7,8 @@ const RedemptivePlan = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-blue-900/20 via-indigo-900/30 to-purple-900/20">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 px-4 bg-gradient-to-b from-blue-900/20 via-indigo-900/30 to-purple-900/20">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ const RedemptivePlan = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-xl md:text-3xl font-bold text-white mb-6">
             <AnimatedHighlightedText text="God's Redemptive Plan" />
           </h2>
           <motion.p
@@ -32,13 +32,13 @@ const RedemptivePlan = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="text-xl text-yellow-300 max-w-3xl mx-auto"
+            className="text-md text-yellow-300 max-w-3xl mx-auto"
           >
             The beautiful story of God's love and salvation
           </motion.p>
         </motion.div>
 
-        <div className="space-y-32">
+        <div className="space-y-20">
           {planItems.map((item, index) => (
             <motion.div
               key={index}
@@ -64,7 +64,7 @@ const RedemptivePlan = () => {
                   transition={{ duration: 0.3 }}
                   className="p-1 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl"
                 >
-                  <div className="bg-gray-900 rounded-xl p-8 h-full">
+                  <div className="bg-gray-900 rounded-xl p-6 h-full">
                     <motion.div
                       animate={{
                         color: hoveredIndex === index ? "#8b5cf6" : "#fbbf24",
@@ -74,10 +74,10 @@ const RedemptivePlan = () => {
                     >
                       {item.icon}
                     </motion.div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                    <h3 className="text-xl md:text-1xl font-bold text-white mb-6">
                       <AnimatedHighlightedText text={item.title} />
                     </h3>
-                    <p className="text-gray-300 text-lg leading-relaxed">
+                    <p className="text-gray-300 text-xs leading-relaxed">
                       {item.content.split(".").map((sentence, i) => (
                         <motion.span
                           key={i}
@@ -109,7 +109,7 @@ const RedemptivePlan = () => {
                   className="aspect-video bg-black rounded-xl overflow-hidden shadow-xl"
                 >
                   <iframe
-                    className="w-full h-full h-[350px]"
+                    className="w-full h-full h-[300px]"
                     src={`https://www.youtube.com/embed/${item.videoId}?modestbranding=1&rel=0`}
                     title={item.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

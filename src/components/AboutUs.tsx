@@ -62,7 +62,7 @@ const AboutUsPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+            className="text-2xl md:text-3xl font-bold text-center text-white mb-16"
           >
             Our <span className="text-yellow-300">Core Beliefs</span>
           </motion.h2>
@@ -92,10 +92,10 @@ const AboutUsPage = () => {
                   >
                     {belief.icon}
                   </motion.div>
-                  <h3 className="text-xl font-bold text-yellow-300 mb-4">
+                  <h3 className="text-lg font-bold text-yellow-300 mb-4">
                     {belief.title}
                   </h3>
-                  <p className="text-gray-200">{belief.content}</p>
+                  <p className="text-gray-200 text-xs">{belief.content}</p>
                 </div>
               </motion.div>
             ))}
@@ -110,9 +110,9 @@ const AboutUsPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-white mb-8"
+            className="text-2xl md:text-3xl font-bold text-white mb-8"
           >
-            Want to <span className="text-yellow-300">Learn More</span>?
+            Want to <span className="text-yellow-300 text-md">Learn More</span>?
           </motion.h2>
 
           <motion.p
@@ -120,7 +120,7 @@ const AboutUsPage = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
+            className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto"
           >
             If you have questions about our beliefs or want to know more about
             Jesus, we'd love to talk with you.

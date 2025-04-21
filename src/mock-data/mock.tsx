@@ -229,3 +229,21 @@ export const beliefs = [
       "We believe Jesus will return one day in a way everyone will see. He will bring full justice and restore all things. Those who trust Him will live forever with God in perfect joy.",
   },
 ];
+
+export const points = [
+  {
+    title: "God's Design & Our Need",
+    content:
+      "From the very beginning, God created us to experience a close relationship with Him and to live with real purpose. Unfortunately, our wrong choices (what the Bible calls sin) break that relationship, leaving us with a sense of emptiness or guilt we can't fix on our own.",
+  },
+  {
+    title: "Jesus' Sacrifice & Our Response",
+    content:
+      "The incredible news is that God didn't leave us on our own. In Jesus, God stepped into our brokenness, took our failures upon Himself, and conquered sin and death through His resurrection. When we turn from our old ways and put our trust in Jesus, we receive forgiveness, hope, and a new life guided by the Holy Spirit.",
+  },
+  {
+    title: "Living with God & Moving Forward",
+    content:
+      "Choosing to follow Jesus is the start of a lifelong journey. It means daily discovering His love, aligning our choices with His wisdom, and experiencing the joy of walking through life with the One who created us. You don't have to be perfect to come to Him—He simply wants your heart and a willingness to let Him lead.",
+  },
+];

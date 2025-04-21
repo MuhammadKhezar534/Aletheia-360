@@ -56,16 +56,16 @@ const Banner = () => {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h2 className="text-2xl md:text-3xl font-light text-yellow-300 mb-2">
+          <h2 className="text-xl md:text-1xl font-light text-yellow-300 mb-2">
             Welcome to Aletheia 360
           </h2>
-          <h1 className="text-4xl md:text-6xl font-bold text-white">
+          <h1 className="text-1xl md:text-3xl font-bold text-white">
             Experience God's <span className="text-yellow-300">Love</span> and{" "}
             <span className="text-yellow-300">Mercy</span>
           </h1>
         </motion.div>
 
-        <div className="mb-12 h-40">
+        <div className="mb-12 h-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -73,7 +73,7 @@ const Banner = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="text-5xl md:text-7xl font-bold text-yellow-300 mb-4"
+              className="text-2xl md:text-4xl font-bold text-yellow-300 mb-4"
             >
               {WORDS[currentIndex].text}
             </motion.div>
@@ -87,7 +87,7 @@ const Banner = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
-            className="text-xl md:text-2xl italic text-white mb-4 leading-relaxed"
+            className="text-md md:text-lg italic text-white mb-4 leading-relaxed"
           >
             "{WORDS[currentIndex].description}"
           </motion.p>
@@ -126,7 +126,7 @@ const Banner = () => {
                 transition: { duration: 0.3 },
               }}
               onClick={() => setCurrentIndex(index)}
-              className="px-6 py-3 rounded-full bg-white bg-opacity-10 text-white cursor-pointer border border-yellow-300 border-opacity-30 hover:border-opacity-100 transition-all"
+              className="px-4 py-2 rounded-full text-sm bg-white bg-opacity-10 text-white cursor-pointer border border-yellow-300 border-opacity-30 hover:border-opacity-100 transition-all"
             >
               {word.text}
             </motion.button>
@@ -141,7 +141,7 @@ const Banner = () => {
         >
           <button
             onClick={() => setIsModalOpen(true)}
-            className="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg text-md transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Contact Us
           </button>

@@ -36,7 +36,7 @@ const HeroSection = ({ onScrollClick }: Props) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+          className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
         >
           Life Stories: <span className="text-yellow-300">Real People</span>
         </motion.h1>
@@ -47,12 +47,12 @@ const HeroSection = ({ onScrollClick }: Props) => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-1xl md:text-2xl font-bold text-white mb-4">
             Discover{" "}
             <span className="text-yellow-300">{words[currentWordIndex]}</span>{" "}
             in Christ
           </h2>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
             We're glad you're here. Meet people who've experienced how Jesus
             brings healing and purpose even in life's toughest challenges.
           </p>
@@ -68,14 +68,14 @@ const HeroSection = ({ onScrollClick }: Props) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onScrollClick}
-            className="px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg transition-all"
+            className="px-6 py-2 tet-sm bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg transition-all"
           >
             Watch Stories
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-transparent hover:bg-white hover:bg-opacity-10 text-white border-2 border-white font-bold rounded-lg transition-all"
+            className="px-6 py-2 tet-sm bg-transparent hover:bg-white hover:bg-opacity-10 text-white border-2 border-white font-bold rounded-lg transition-all"
           >
             Learn More
           </motion.button>

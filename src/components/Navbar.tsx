@@ -51,7 +51,7 @@ const Navbar = () => {
             <FaCross />
           </motion.div>
           <motion.span
-            className="text-white font-bold text-xl"
+            className="text-white font-bold text-lg"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
@@ -64,7 +64,7 @@ const Navbar = () => {
           {links.map((link) => (
             <motion.span
               key={link.name}
-              className={`relative px-2 py-1 text-lg ${
+              className={`relative px-2 py-1 text-sm ${
                 activeLink === link.name
                   ? "text-yellow-400"
                   : "text-white hover:text-yellow-300 cursor-pointer"
@@ -90,7 +90,7 @@ const Navbar = () => {
             }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsModalOpen(true)}
-            className="px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-all"
+            className="px-4 py-2 text-md bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-all"
           >
             Contact Us
           </motion.button>

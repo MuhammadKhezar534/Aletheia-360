@@ -28,7 +28,7 @@ const WelcomeSection = () => {
     >
       <div className="max-w-5xl mx-auto text-center">
         <motion.div animate={controls} className="inline-block mb-12">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-1xl md:text-3xl font-bold text-white mb-6">
             <span className="relative inline-block">
               <motion.span
                 animate={{
@@ -59,7 +59,7 @@ const WelcomeSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, staggerChildren: 0.1 }}
           viewport={{ once: true }}
-          className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto"
+          className="text-lg md:text-xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto"
         >
           <motion.p className="mb-6">
             We're <AnimatedWord word="glad" colors={["#fbbf24", "#f59e0b"]} />{" "}
@@ -103,7 +103,7 @@ const WelcomeSection = () => {
               repeat: Infinity,
               ease: "easeOut",
             }}
-            className="px-10 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold rounded-full text-lg relative overflow-hidden"
+            className="px-6 py-2 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold rounded-full text-md relative overflow-hidden"
           >
             <span
               className="relative z-10"

@@ -45,7 +45,7 @@ const PrayerContactSection = () => {
   return (
     <div
       ref={containerRef}
-      className="py-20 px-4 bg-gradient-to-b from-blue-900/50 to-purple-900/50"
+      className="py-16 px-4 bg-gradient-to-b from-blue-900/50 to-purple-900/50"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
@@ -55,13 +55,13 @@ const PrayerContactSection = () => {
           <h3 className="text-2xl font-bold text-yellow-400 mb-6 text-center">
             A Simple Prayer
           </h3>
-          <p className="text-gray-200 mb-6 italic text-center">
+          <p className="text-gray-200 mb-6 italic text-center text-sm">
             If you sense God stirring your heart and you're ready to begin (or
             rekindle) a relationship with Him, you can pray something like this
             in your own words:
           </p>
           <div className="bg-black bg-opacity-40 p-6 rounded-lg border-l-4 border-yellow-400">
-            <p className="text-gray-200 leading-relaxed">
+            <p className="text-gray-200 leading-relaxed text-sm">
               "God, I admit that I've sinned and turned away from You. Thank You
               for sending Jesus to die on the cross for my sins and for offering
               me forgiveness. Right now, I choose to turn from my old ways and
@@ -76,10 +76,10 @@ const PrayerContactSection = () => {
           className="contact-card bg-gradient-to-br from-yellow-400/10 to-amber-500/10 p-8 rounded-xl border border-yellow-400/30 text-center"
           whileHover={{ scale: 1.02 }}
         >
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-1xl font-bold text-white mb-4">
             Want to Talk or Need Prayer?
           </h3>
-          <p className="text-gray-200 mb-6">
+          <p className="text-gray-200 mb-6 text-sm">
             We'd love to connect with you. Whether you have questions, need
             prayer, or just want to share what's on your heart, we're here to
             listen and help.
@@ -88,7 +88,7 @@ const PrayerContactSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsModalOpen(true)}
-            className="px-8 py-3 bg-yellow-500 text-black font-semibold rounded-lg"
+            className="px-6 py-2 text-sm bg-yellow-500 text-black font-semibold rounded-lg"
           >
             Contact Us
           </motion.button>
