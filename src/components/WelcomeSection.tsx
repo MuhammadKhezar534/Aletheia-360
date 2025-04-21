@@ -1,22 +1,50 @@
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+// import { useEffect, useState } from "react";
 import useModalContext from "../hooks/useModalContext";
 
 const WelcomeSection = () => {
   const controls = useAnimation();
   const { setIsModalOpen } = useModalContext();
+  // const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    const sequence = async () => {
-      while (true) {
-        await controls.start({
-          scale: [1, 1.05, 1],
-          transition: { duration: 3, ease: "easeInOut" },
-        });
-      }
-    };
-    sequence();
-  }, [controls]);
+  // useEffect(() => {
+  //   const sequence = async () => {
+  //     while (true) {
+  //       await controls.start({
+  //         scale: [1, 1.05, 1],
+  //         transition: { duration: 3, ease: "easeInOut" },
+  //       });
+  //     }
+  //   };
+  //   sequence();
+  // }, [controls]);
+
+  // useEffect(() => {
+  //   setIsMounted(true);
+  //   return () => setIsMounted(false);
+  // }, []);
+
+  // useEffect(() => {
+  //   if (!isMounted) return;
+
+  //   let isActive = true;
+
+  //   const runAnimation = async () => {
+  //     while (isActive) {
+  //       await controls.start({
+  //         scale: [1, 1.05, 1],
+  //         transition: { duration: 3, ease: "easeInOut" },
+  //       });
+  //     }
+  //   };
+
+  //   runAnimation();
+
+  //   return () => {
+  //     isActive = false;
+  //     controls.stop();
+  //   };
+  // }, [controls, isMounted]);
 
   return (
     <motion.section
