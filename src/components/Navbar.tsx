@@ -109,17 +109,22 @@
 
 // export default Navbar;
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { FaCross, FaTimes, FaBars } from "react-icons/fa";
+import { FaCross } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import useModalContext from "../hooks/useModalContext";
+import MobileNav from "./MobileNav";
 
-interface Link {
+export interface Link {
   name: string;
   path: string;
 }
-
+export const links: Link[] = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about-us" },
+  { name: "Life Stories", path: "/life-stories" },
+];
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
@@ -127,12 +132,6 @@ const Navbar = () => {
   const { setIsModalOpen } = useModalContext();
   const navigate = useNavigate();
   const location = useLocation();
-
-  const links: Link[] = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about-us" },
-    { name: "Life Stories", path: "/life-stories" },
-  ];
 
   // Set active link based on current path
   useEffect(() => {
@@ -146,7 +145,7 @@ const Navbar = () => {
   const handleClick = (link: Link) => {
     setActiveLink(link.name);
     navigate(link.path);
-    setMobileMenuOpen(false); // Close mobile menu when a link is clicked
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -181,7 +180,6 @@ const Navbar = () => {
           </motion.span>
         </motion.div>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {links.map((link) => (
             <motion.span
@@ -217,57 +215,13 @@ const Navbar = () => {
             Contact Us
           </motion.button>
         </div>
-
-        <motion.button
-          className="md:hidden text-2xl z-50 bg-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </motion.button>
-
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden fixed inset-0 top-16 bg-white/95 backdrop-blur-sm z-40 px-4 py-8 h-[100vh]"
-            >
-              <div className="flex flex-col space-y-8">
-                {links.map((link) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ x: 20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    className={`text-lg font-medium px-4 py-2 rounded-lg ${
-                      activeLink === link.name
-                        ? "bg-indigo-100 text-indigo-600"
-                        : "text-indigo-900 hover:bg-indigo-50"
-                    }`}
-                    onClick={() => handleClick(link)}
-                  >
-                    {link.name}
-                  </motion.div>
-                ))}
-
-                <motion.button
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.1, duration: 0.3 }}
-                  onClick={() => {
-                    setIsModalOpen(true);
-                    setMobileMenuOpen(false);
-                  }}
-                  className="mt-8 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-full text-lg shadow-md"
-                >
-                  Contact Us
-                </motion.button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <MobileNav
+          setIsModalOpen={setIsModalOpen}
+          handleClick={handleClick}
+          activeLink={activeLink}
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
       </div>
     </motion.nav>
   );
