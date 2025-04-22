@@ -1,9 +1,9 @@
-import HeroSection from "../components/HeroSection1";
-import Testimony from "../components/Testimony";
-import GoodNewsSection from "../components/GoodNewsSection";
-import PrayerContactSection from "../components/PrayerContactSection";
+import Testimony from "../components/LifeStories/Testimony";
+import GoodNewsSection from "../components/LifeStories/GoodNewsSection";
+import PrayerContactSection from "../components/LifeStories/PrayerContactSection";
 import { testimonies } from "../mock-data/mock";
 import { useRef } from "react";
+import HeroSection from "../components/LifeStories/HeroSection";
 
 const LifeStories = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);

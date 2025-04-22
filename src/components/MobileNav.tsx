@@ -23,6 +23,7 @@ const MobileNav = ({
       <motion.button
         className="md:hidden text-2xl z-50 bg-white"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        whileTap={{ scale: 0.9 }}
       >
         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
       </motion.button>
@@ -34,19 +35,19 @@ const MobileNav = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed inset-0 top-16 bg-white/95 backdrop-blur-sm z-40 px-4 py-8 h-[100vh]"
+            className="md:hidden fixed inset-0 top-16 bg-amber-50/95 backdrop-blur-sm z-40 px-4 py-8 h-[100vh]"
           >
-            <div className="flex flex-col space-y-8">
-              {links.map((link) => (
+            <div className="flex flex-col space-y-6">
+              {links.map((link, index) => (
                 <motion.div
                   key={link.name}
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                  className={`text-lg font-medium px-4 py-2 rounded-lg ${
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  className={`text-lg font-medium px-4 py-3 rounded-lg ${
                     activeLink === link.name
-                      ? "bg-indigo-100 text-indigo-600"
-                      : "text-indigo-900 hover:bg-indigo-50"
+                      ? "bg-amber-100 text-amber-700"
+                      : "text-amber-900 hover:bg-amber-100/50"
                   }`}
                   onClick={() => handleClick(link)}
                 >
@@ -57,12 +58,12 @@ const MobileNav = ({
               <motion.button
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.3 }}
+                transition={{ delay: links.length * 0.1, duration: 0.3 }}
                 onClick={() => {
                   setIsModalOpen(true);
                   setMobileMenuOpen(false);
                 }}
-                className="mt-8 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-full text-lg shadow-md"
+                className="mt-8 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-full text-lg shadow-md hover:from-amber-600 hover:to-amber-700 transition-all"
               >
                 Contact Us
               </motion.button>

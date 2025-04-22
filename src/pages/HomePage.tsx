@@ -1,5 +1,4 @@
-// src/pages/Home.tsx
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
 import WelcomeSection from "../components/WelcomeSection";
 import RedemptivePlan from "../components/RedemptivePlan";
 import LifeWithGod from "../components/LifeWithGod";
