@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import About from "./components/AboutUs";
 import { createContext, Dispatch, SetStateAction, useState } from "react";
 import ContactModal from "./components/ContactModal";
-import Footer from "./components/Footer";
 
 export interface ThemeContextType {
   isModalOpen: boolean;
@@ -30,7 +29,6 @@ function App() {
             <Route path="/about-us" element={<About />} />
           </Routes>
         </main>
-        <Footer />
       </Router>
       <ContactModal
         isOpen={isModalOpen}
