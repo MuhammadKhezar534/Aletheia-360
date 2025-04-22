@@ -146,7 +146,7 @@ import { beliefs } from "../mock-data/mock";
 import useModalContext from "../hooks/useModalContext";
 
 const HeroSection = ({ onContactClick }: { onContactClick: () => void }) => (
-  <div className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+  <div className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-amber-200 to-amber-100 text-amber-900">
     <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 text-center">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
@@ -154,16 +154,17 @@ const HeroSection = ({ onContactClick }: { onContactClick: () => void }) => (
         transition={{ duration: 0.8 }}
         className="text-4xl md:text-6xl font-bold mb-6"
       >
-        About <span className="text-gray-400">Aletheia 360</span>
+        About <span className="text-amber-500">Aletheia 360</span>
       </motion.h1>
 
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
+        className="text-xl md:text-2xl text-amber-800 max-w-3xl mx-auto mb-8 leading-relaxed"
       >
-        A ministry of Life International Christian Fellowship
+        Aletheia 360 is a ministry of Life International Christian Fellowship.
+        Here is our 8-point statement of our beliefs...
       </motion.p>
 
       <motion.div
@@ -175,7 +176,7 @@ const HeroSection = ({ onContactClick }: { onContactClick: () => void }) => (
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={onContactClick}
-          className="px-8 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold rounded-lg transition-all"
+          className="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg transition-all"
         >
           Contact Us
         </motion.button>
@@ -185,16 +186,16 @@ const HeroSection = ({ onContactClick }: { onContactClick: () => void }) => (
 );
 
 const CoreBeliefsSection = () => (
-  <div className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-700">
+  <div className="py-20 px-4 bg-amber-50">
     <div className="max-w-6xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-2xl md:text-3xl font-bold text-center text-white mb-16"
+        className="text-2xl md:text-3xl font-bold text-center text-amber-900 mb-16"
       >
-        Our <span className="text-gray-400">Core Beliefs</span>
+        Our <span className="text-amber-500">Core Beliefs</span>
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -206,13 +207,11 @@ const CoreBeliefsSection = () => (
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             whileHover={{ y: -10 }}
-            className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-10"
+            className="bg-white p-6 rounded-xl border border-amber-100 shadow-md"
           >
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center text-amber-800">
               <motion.div
-                animate={{
-                  rotate: [0, 10, -10, 0],
-                }}
+                animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{
                   duration: 8,
                   repeat: Infinity,
@@ -222,10 +221,10 @@ const CoreBeliefsSection = () => (
               >
                 {belief.icon}
               </motion.div>
-              <h3 className="text-lg font-bold text-gray-400 mb-4">
+              <h3 className="text-lg font-bold text-amber-900 mb-4">
                 {belief.title}
               </h3>
-              <p className="text-gray-300 text-xs">{belief.content}</p>
+              <p className="text-amber-700 text-xs">{belief.content}</p>
             </div>
           </motion.div>
         ))}
@@ -235,16 +234,16 @@ const CoreBeliefsSection = () => (
 );
 
 const LearnMoreSection = () => (
-  <div className="py-20 px-4 bg-gradient-to-b from-gray-700 to-gray-800">
+  <div className="py-20 px-4 bg-amber-100">
     <div className="max-w-4xl mx-auto text-center">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-2xl md:text-3xl font-bold text-white mb-8"
+        className="text-2xl md:text-3xl font-bold text-amber-900 mb-8"
       >
-        Want to <span className="text-gray-400">Learn More</span>?
+        Want to <span className="text-amber-500">Learn More</span>?
       </motion.h2>
 
       <motion.p
@@ -252,7 +251,7 @@ const LearnMoreSection = () => (
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto"
+        className="text-lg text-amber-800 mb-8 max-w-3xl mx-auto"
       >
         If you have questions about our beliefs or want to know more about
         Jesus, we'd love to talk with you.
@@ -261,7 +260,7 @@ const LearnMoreSection = () => (
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="px-8 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold rounded-lg transition-all"
+        className="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg transition-all"
       >
         Get In Touch
       </motion.button>
@@ -273,7 +272,7 @@ const AboutUsPage = () => {
   const { setIsModalOpen } = useModalContext();
 
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-amber-50 text-amber-900">
       <HeroSection onContactClick={() => setIsModalOpen(true)} />
       <CoreBeliefsSection />
       <LearnMoreSection />

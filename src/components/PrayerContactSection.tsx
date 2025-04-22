@@ -101,6 +101,7 @@
 // export default PrayerContactSection;
 
 // src/components/PrayerContactSection.tsx
+
 import { motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -147,23 +148,23 @@ const PrayerContactSection = () => {
   return (
     <div
       ref={containerRef}
-      className="py-16 px-4 bg-gradient-to-b from-gray-900/50 to-black"
+      className="py-16 px-4 bg-gradient-to-b from-[#fde68a] via-[#fbcfe8] to-[#fca5a5]"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
-          className="prayer-card bg-white bg-opacity-5 backdrop-blur-sm p-8 rounded-xl border border-white border-opacity-10 mb-12"
+          className="prayer-card bg-white/60 backdrop-blur-sm p-8 rounded-xl border border-white/30 mb-12 shadow-xl"
           whileHover={{ y: -5 }}
         >
-          <h3 className="text-2xl font-bold text-gray-100 mb-6 text-center">
+          <h3 className="text-2xl font-bold text-[#7c2d12] mb-6 text-center">
             A Simple Prayer
           </h3>
-          <p className="text-gray-300 mb-6 italic text-center text-sm">
+          <p className="text-[#7c2d12] mb-6 italic text-center text-sm">
             If you sense God stirring your heart and you're ready to begin (or
             rekindle) a relationship with Him, you can pray something like this
             in your own words:
           </p>
-          <div className="bg-black bg-opacity-40 p-6 rounded-lg border-l-4 border-gray-600">
-            <p className="text-gray-300 leading-relaxed text-sm">
+          <div className="bg-white/70 p-6 rounded-lg border-l-4 border-[#f87171]">
+            <p className="text-[#7c2d12] leading-relaxed text-sm">
               "God, I admit that I've sinned and turned away from You. Thank You
               for sending Jesus to die on the cross for my sins and for offering
               me forgiveness. Right now, I choose to turn from my old ways and
@@ -175,13 +176,13 @@ const PrayerContactSection = () => {
         </motion.div>
 
         <motion.div
-          className="contact-card bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-8 rounded-xl border border-gray-700 text-center"
+          className="contact-card bg-white/50 backdrop-blur-md p-8 rounded-xl border border-[#fca5a5] text-center shadow-lg"
           whileHover={{ scale: 1.02 }}
         >
-          <h3 className="text-xl font-bold text-gray-100 mb-4">
+          <h3 className="text-xl font-bold text-[#7c2d12] mb-4">
             Want to Talk or Need Prayer?
           </h3>
-          <p className="text-gray-300 mb-6 text-sm">
+          <p className="text-[#7c2d12] mb-6 text-sm">
             We'd love to connect with you. Whether you have questions, need
             prayer, or just want to share what's on your heart, we're here to
             listen and help.
@@ -190,7 +191,7 @@ const PrayerContactSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsModalOpen(true)}
-            className="px-6 py-2 text-sm bg-gray-300 text-black font-semibold rounded-lg"
+            className="px-6 py-2 text-sm bg-[#f87171] hover:bg-[#ef4444] text-white font-semibold rounded-lg"
           >
             Contact Us
           </motion.button>

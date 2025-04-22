@@ -271,7 +271,7 @@ const WelcomeSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-20 px-4 bg-gray-50"
+      className="py-20 px-4 bg-amber-50"
     >
       <div className="max-w-5xl mx-auto text-center">
         <AnimatedHeading controls={controls} />
@@ -284,11 +284,11 @@ const WelcomeSection = () => {
 
 const AnimatedHeading = ({ controls }: { controls: any }) => (
   <motion.div animate={controls} className="inline-block mb-12">
-    <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
+    <h2 className="text-2xl md:text-4xl font-bold text-amber-900 mb-6">
       <span className="relative inline-block">
         <motion.span
           animate={{
-            color: ["#4b5563", "#6b7280", "#4b5563"],
+            color: ["#92400e", "#b45309", "#92400e"], // Amber 700 to 600 to 700
           }}
           transition={{
             duration: 4,
@@ -300,7 +300,7 @@ const AnimatedHeading = ({ controls }: { controls: any }) => (
           Welcome to Aletheia 360
         </motion.span>
         <motion.div
-          className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-gray-500 to-white-500"
+          className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-amber-200"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 1.5, delay: 0.3 }}
@@ -317,20 +317,20 @@ const AnimatedParagraph = () => (
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, staggerChildren: 0.1 }}
     viewport={{ once: true }}
-    className="text-lg md:text-xl text-gray-700 mb-12 leading-relaxed max-w-4xl mx-auto"
+    className="text-lg md:text-xl text-amber-800 mb-12 leading-relaxed max-w-4xl mx-auto"
   >
     <motion.p className="mb-6">
-      We're <AnimatedWord word="glad" colors={["#d1d5db ", "#4b5563"]} /> you're
+      We're <AnimatedWord word="glad" colors={["#fcd34d", "#92400e"]} /> you're
       here! This is a space to discover what makes the Gospel truly{" "}
-      <AnimatedWord word="Good News" colors={["#d1d5db ", "#4b5563"]} />.
+      <AnimatedWord word="Good News" colors={["#fcd34d", "#92400e"]} />.
     </motion.p>
     <motion.p className="mb-6">
       No matter your background or where you are on your{" "}
-      <AnimatedWord word="spiritual journey" colors={["#d1d5db ", "#4b5563"]} />
-      , we invite you to explore the{" "}
-      <AnimatedWord word="hope" colors={["#d1d5db ", "#4b5563"]} />,
-      <AnimatedWord word="forgiveness" colors={["#d1d5db ", "#4b5563"]} />, and{" "}
-      <AnimatedWord word="purpose" colors={["#d1d5db ", "#4b5563"]} /> Jesus
+      <AnimatedWord word="spiritual journey" colors={["#fcd34d", "#92400e"]} />,
+      we invite you to explore the{" "}
+      <AnimatedWord word="hope" colors={["#fcd34d", "#92400e"]} />,
+      <AnimatedWord word="forgiveness" colors={["#fcd34d", "#92400e"]} />, and{" "}
+      <AnimatedWord word="purpose" colors={["#fcd34d", "#92400e"]} /> Jesus
       offers.
     </motion.p>
     <motion.p>
@@ -349,9 +349,9 @@ const ContactButton = ({ onClick }: { onClick: () => void }) => (
     <motion.button
       animate={{
         boxShadow: [
-          "0 0 0 0 rgba(99, 102, 241, 0.7)",
-          "0 0 0 10px rgba(99, 102, 241, 0)",
-          "0 0 0 0 rgba(99, 102, 241, 0)",
+          "0 0 0 0 rgba(180, 83, 9, 0.7)",
+          "0 0 0 10px rgba(180, 83, 9, 0)",
+          "0 0 0 0 rgba(180, 83, 9, 0)",
         ],
       }}
       transition={{
@@ -359,11 +359,11 @@ const ContactButton = ({ onClick }: { onClick: () => void }) => (
         repeat: Infinity,
         ease: "easeOut",
       }}
-      className="px-6 py-2 bg-gradient-to-r from-gray-500 to-gray-500 text-white font-bold rounded-full text-md relative overflow-hidden"
+      className="px-6 py-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-bold rounded-full text-md relative overflow-hidden"
       onClick={onClick}
     >
       <span className="relative z-10">Contact Us</span>
-      <motion.div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      <motion.div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-700 opacity-0 hover:opacity-100 transition-opacity duration-300" />
     </motion.button>
   </motion.div>
 );

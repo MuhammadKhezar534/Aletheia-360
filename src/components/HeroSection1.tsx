@@ -129,22 +129,21 @@ const HeroSection = ({ onScrollClick }: Props) => {
       setCurrentWordIndex((prev) => (prev + 1) % words.length);
     }, 2000);
     return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center bg-gray-900 text-white">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-amber-100 via-rose-100 to-amber-50 text-red-900">
+      {/* Background glow (light, not dark) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-transparent backdrop-blur-sm"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+          className="text-2xl md:text-4xl lg:text-5xl font-bold text-rose-700 mb-6"
         >
-          Life Stories: <span className="text-gray-400">Real People</span>
+          Life Stories: <span className="text-amber-600">Real People</span>
         </motion.h1>
 
         <motion.div
@@ -153,12 +152,12 @@ const HeroSection = ({ onScrollClick }: Props) => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mb-12"
         >
-          <h2 className="text-1xl md:text-2xl font-bold text-white mb-4">
+          <h2 className="text-1xl md:text-2xl font-bold text-rose-600 mb-4">
             Discover{" "}
-            <span className="text-gray-400">{words[currentWordIndex]}</span> in
+            <span className="text-amber-700">{words[currentWordIndex]}</span> in
             Christ
           </h2>
-          <p className="text-md md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md md:text-lg text-rose-500 max-w-3xl mx-auto leading-relaxed">
             We're glad you're here. Meet people who've experienced how Jesus
             brings healing and purpose even in life's toughest challenges.
           </p>
@@ -172,26 +171,26 @@ const HeroSection = ({ onScrollClick }: Props) => {
         >
           <HeroButton
             onClick={onScrollClick}
-            bgColor="bg-gray-600"
-            hoverColor="hover:bg-gray-700"
+            bgColor="bg-rose-600"
+            hoverColor="hover:bg-rose-700"
             textColor="text-white"
             label="Watch Stories"
           />
           <HeroButton
-            bgColor="bg-transparent"
-            hoverColor="hover:bg-gray-200"
-            textColor="text-white"
+            bgColor="bg-white border border-amber-400"
+            hoverColor="hover:bg-amber-100"
+            textColor="text-rose-700"
             label="Learn More"
           />
         </motion.div>
       </div>
 
-      {/* Floating cross animation */}
+      {/* Floating cross animation (light tone) */}
       <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white opacity-30"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-amber-400 opacity-60"
         animate={{
           y: [0, -20, 0],
-          opacity: [0.3, 0.5, 0.3],
+          opacity: [0.4, 0.7, 0.4],
         }}
         transition={{
           duration: 6,
@@ -234,7 +233,7 @@ const HeroButton = ({
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
     onClick={onClick}
-    className={`${bgColor} ${hoverColor} ${textColor} px-6 py-2 text-sm font-bold rounded-lg transition-all`}
+    className={`${bgColor} ${hoverColor} ${textColor} px-6 py-2 text-sm font-bold rounded-lg transition-all shadow-md`}
   >
     {label}
   </motion.button>

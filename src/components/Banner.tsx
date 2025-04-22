@@ -368,7 +368,7 @@ import { WORDS } from "../mock-data/mock";
 import gsap from "gsap";
 import useModalContext from "../hooks/useModalContext";
 
-const NEUTRAL_BG = "#f3f4f6";
+const NEUTRAL_BG = "#FFF4CA"; // Light amber-50 color
 
 const AnimatedHeader = () => (
   <motion.div
@@ -377,12 +377,12 @@ const AnimatedHeader = () => (
     transition={{ duration: 0.8 }}
     className="mb-8"
   >
-    <h2 className="text-xl md:text-1xl font-light text-gray-600 mb-2">
+    <h2 className="text-xl md:text-1xl font-light text-amber-700 mb-2">
       Welcome to Aletheia 360
     </h2>
-    <h1 className="text-1xl md:text-3xl font-bold text-gray-800">
-      Experience God's <span className="text-blue-900">Love</span> and{" "}
-      <span className="text-blue-900">Mercy</span>
+    <h1 className="text-1xl md:text-3xl font-bold text-amber-900">
+      Experience God's <span className="text-amber-600">Love</span> and{" "}
+      <span className="text-amber-600">Mercy</span>
     </h1>
   </motion.div>
 );
@@ -396,7 +396,7 @@ const WordDisplay = ({ currentIndex }: { currentIndex: number }) => (
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -30 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="text-2xl md:text-4xl font-bold text-gray-800 mb-4"
+        className="text-2xl md:text-4xl font-bold text-amber-900 mb-4"
       >
         {WORDS[currentIndex].text}
       </motion.div>
@@ -405,14 +405,14 @@ const WordDisplay = ({ currentIndex }: { currentIndex: number }) => (
 );
 
 const WordDetails = ({ currentIndex }: { currentIndex: number }) => (
-  <div className="max-w-2xl mx-auto mb-12 bg-white bg-opacity-80 p-6 rounded-lg shadow-lg backdrop-blur-sm">
+  <div className="max-w-2xl mx-auto mb-12 bg-amber-50 bg-opacity-80 p-6 rounded-lg shadow-lg backdrop-blur-sm border border-amber-100">
     <motion.p
       key={`desc-${currentIndex}`}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5 }}
-      className="text-md md:text-lg italic text-gray-700 mb-4 leading-relaxed"
+      className="text-md md:text-lg italic text-amber-800 mb-4 leading-relaxed"
     >
       "{WORDS[currentIndex].description}"
     </motion.p>
@@ -422,7 +422,7 @@ const WordDetails = ({ currentIndex }: { currentIndex: number }) => (
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5, delay: 0.3 }}
-      className="text-lg text-blue-900 font-semibold"
+      className="text-lg text-amber-600 font-semibold"
     >
       — {WORDS[currentIndex].verse}
     </motion.p>
@@ -447,19 +447,19 @@ const WordButtons = ({
         key={word.text}
         whileHover={{
           scale: 1.1,
-          backgroundColor: "rgba(31, 41, 55, 0.15)",
+          backgroundColor: "rgba(180, 83, 9, 0.15)",
           transition: { duration: 0.2 },
         }}
         whileTap={{ scale: 0.95 }}
         animate={{
           backgroundColor:
             currentIndex === index
-              ? "rgba(31, 41, 55, 0.25)"
-              : "rgba(255, 255, 255, 0.7)",
+              ? "rgba(180, 83, 9, 0.25)"
+              : "rgba(254, 243, 199, 0.7)",
           transition: { duration: 0.3 },
         }}
         onClick={() => setCurrentIndex(index)}
-        className="px-4 py-2 rounded-full text-sm text-gray-800 cursor-pointer border border-gray-300 hover:border-gray-400 transition-all shadow-sm"
+        className="px-4 py-2 rounded-full text-sm text-amber-900 cursor-pointer border border-amber-200 hover:border-amber-300 transition-all shadow-sm"
       >
         {word.text}
       </motion.button>
@@ -476,7 +476,7 @@ const ContactButton = ({ onClick }: { onClick: () => void }) => (
   >
     <button
       onClick={onClick}
-      className="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg text-md transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+      className="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-amber-50 font-bold rounded-lg text-md transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
     >
       Contact Us
     </button>
@@ -485,7 +485,7 @@ const ContactButton = ({ onClick }: { onClick: () => void }) => (
 
 const CrossIcon = () => (
   <motion.div
-    className="absolute right-10 top-1/2 text-gray-400 opacity-40"
+    className="absolute right-10 top-1/2 text-amber-300 opacity-60"
     animate={{
       rotate: [0, 5, -5, 0],
       y: ["-50%", "-48%", "-52%", "-50%"],

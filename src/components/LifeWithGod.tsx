@@ -383,7 +383,7 @@ const LifeWithGod = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-24 px-4 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-50"
+      className="py-24 px-4 bg-gradient-to-b from-amber-50 via-amber-100 to-amber-50"
     >
       <div className="max-w-4xl mx-auto">
         <HeaderSection />
@@ -394,8 +394,6 @@ const LifeWithGod = () => {
   );
 };
 
-// -------------------- Components --------------------
-
 const HeaderSection = () => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
@@ -404,13 +402,13 @@ const HeaderSection = () => (
     viewport={{ once: true }}
     className="text-center mb-20"
   >
-    <h2 className="text-1xl md:text-3xl font-bold text-gray-800 mb-6">
+    <h2 className="text-1xl md:text-3xl font-bold text-amber-900 mb-6">
       <AnimatedGlowText text="Life with God & Next Steps" />
     </h2>
     <motion.p
       animate={{ scale: [1, 1.02, 1] }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      className="text-md text-gray-700 max-w-3xl mx-auto"
+      className="text-md text-amber-800 max-w-3xl mx-auto"
     >
       This journey isn't meant to be walked alone. God is with you, and He often
       works through other people to help you grow in faith and love.
@@ -438,23 +436,23 @@ const StepCard = ({ step, index }: { step: any; index: number }) => (
     <motion.div
       animate={{
         boxShadow: [
-          "0 4px 6px -1px rgba(156, 163, 175, 0.1), 0 2px 4px -1px rgba(156, 163, 175, 0.06)",
-          "0 20px 25px -5px rgba(156, 163, 175, 0.2), 0 10px 10px -5px rgba(156, 163, 175, 0.04)",
-          "0 4px 6px -1px rgba(156, 163, 175, 0.1), 0 2px 4px -1px rgba(156, 163, 175, 0.06)",
+          "0 4px 6px -1px rgba(251, 191, 36, 0.1), 0 2px 4px -1px rgba(251, 191, 36, 0.06)",
+          "0 20px 25px -5px rgba(251, 191, 36, 0.2), 0 10px 10px -5px rgba(251, 191, 36, 0.04)",
+          "0 4px 6px -1px rgba(251, 191, 36, 0.1), 0 2px 4px -1px rgba(251, 191, 36, 0.06)",
         ],
       }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      className="h-full bg-white p-6 rounded-xl border border-gray-100 overflow-hidden shadow-md"
+      className="h-full bg-white p-6 rounded-xl border border-amber-100 overflow-hidden shadow-md"
     >
       <div className="flex items-start gap-6 relative z-10">
         <motion.div
           animate={{ rotate: [0, 5, -5, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="p-4 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full"
+          className="p-4 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full"
         >
           <motion.div
             animate={{
-              color: ["#4b5563", "#6b7280", "#4b5563"],
+              color: ["#92400e", "#b45309", "#92400e"],
             }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -462,13 +460,13 @@ const StepCard = ({ step, index }: { step: any; index: number }) => (
           </motion.div>
         </motion.div>
         <div>
-          <h3 className="text-xl font-bold text-gray-800 mb-4">
+          <h3 className="text-xl font-bold text-amber-900 mb-4">
             <AnimatedUnderlineText text={step.title} />
           </h3>
-          <p className="text-gray-700 text-sm">{step.description}</p>
+          <p className="text-amber-800 text-sm">{step.description}</p>
         </div>
       </div>
-      <motion.div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </motion.div>
   </motion.div>
 );
@@ -490,20 +488,20 @@ const CallToAction = () => {
         animate={{
           backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
           boxShadow: [
-            "0 4px 6px -1px rgba(107, 114, 128, 0.2), 0 2px 4px -1px rgba(107, 114, 128, 0.1)",
-            "0 20px 25px -5px rgba(107, 114, 128, 0.3), 0 10px 10px -5px rgba(107, 114, 128, 0.1)",
-            "0 4px 6px -1px rgba(107, 114, 128, 0.2), 0 2px 4px -1px rgba(107, 114, 128, 0.1)",
+            "0 4px 6px -1px rgba(251, 191, 36, 0.2), 0 2px 4px -1px rgba(251, 191, 36, 0.1)",
+            "0 20px 25px -5px rgba(251, 191, 36, 0.3), 0 10px 10px -5px rgba(251, 191, 36, 0.1)",
+            "0 4px 6px -1px rgba(251, 191, 36, 0.2), 0 2px 4px -1px rgba(251, 191, 36, 0.1)",
           ],
         }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="px-8 py-3 bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 bg-size-200 text-white font-bold rounded-full text-xl relative cursor-pointer overflow-hidden"
+        className="px-8 py-3 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 bg-size-200 text-white font-bold rounded-full text-xl relative cursor-pointer overflow-hidden"
         style={{ backgroundSize: "200% 100%" }}
         onClick={() => setIsModalOpen(true)}
       >
         <span className="relative z-10 text-md">
           Ready to talk or have questions?
         </span>
-        <motion.div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+        <motion.div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 opacity-0 hover:opacity-100 transition-opacity duration-300" />
       </motion.button>
     </motion.div>
   );
@@ -515,9 +513,9 @@ const AnimatedGlowText = ({ text }: { text: string }) => (
   <motion.span
     animate={{
       textShadow: [
-        "0 0 5px rgba(107, 114, 128, 0.3)",
-        "0 0 20px rgba(107, 114, 128, 0.4)",
-        "0 0 5px rgba(107, 114, 128, 0.3)",
+        "0 0 5px rgba(251, 191, 36, 0.3)",
+        "0 0 20px rgba(251, 191, 36, 0.4)",
+        "0 0 5px rgba(251, 191, 36, 0.3)",
       ],
     }}
     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -531,7 +529,7 @@ const AnimatedUnderlineText = ({ text }: { text: string }) => (
   <span className="relative inline-block">
     <span className="relative z-10">{text}</span>
     <motion.span
-      className="absolute bottom-0 left-0 w-full h-1 bg-gray-400"
+      className="absolute bottom-0 left-0 w-full h-1 bg-amber-400"
       animate={{ scaleX: [0, 1, 0], left: [0, 0, "100%"] }}
       transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
     />

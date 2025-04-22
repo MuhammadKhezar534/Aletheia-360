@@ -150,10 +150,10 @@ const GoodNewsSection = () => {
   return (
     <div
       ref={containerRef}
-      className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black"
+      className="py-20 px-4 bg-gradient-to-b from-amber-50 via-rose-100 to-amber-100"
     >
       <div className="max-w-3xl mx-auto">
-        <h2 className="section-title text-1xl md:text-3xl font-bold text-center text-white mb-16">
+        <h2 className="section-title text-1xl md:text-3xl font-bold text-center text-rose-700 mb-16">
           <AnimatedUnderline text="The Good News in a Nutshell" />
         </h2>
 
@@ -161,23 +161,23 @@ const GoodNewsSection = () => {
           {points.map((point, index) => (
             <motion.div
               key={index}
-              className="good-news-point bg-white bg-opacity-5 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-10"
+              className="good-news-point bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-xl border border-amber-200 shadow-md"
               whileHover={{ y: -5 }}
             >
               <motion.h3
                 animate={{
-                  color: ["#e5e7eb", "#9ca3af", "#e5e7eb"],
+                  color: ["#b91c1c", "#c2410c", "#b91c1c"],
                 }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="text-lg font-bold text-gray-300 mb-4"
+                className="text-lg font-bold mb-4"
               >
                 {point.title}
               </motion.h3>
-              <p className="text-gray-400 leading-relaxed text-xs">
+              <p className="text-rose-600 leading-relaxed text-sm">
                 {point.content}
               </p>
             </motion.div>
@@ -191,9 +191,9 @@ const GoodNewsSection = () => {
 const AnimatedUnderline = ({ text }: { text: string }) => {
   return (
     <span className="relative inline-block">
-      <span className="relative z-10 text-white">{text}</span>
+      <span className="relative z-10 text-rose-700">{text}</span>
       <motion.span
-        className="absolute bottom-0 left-0 w-full h-1 bg-gray-500"
+        className="absolute bottom-0 left-0 w-full h-1 bg-amber-500"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 1.5, ease: Back.easeOut }}

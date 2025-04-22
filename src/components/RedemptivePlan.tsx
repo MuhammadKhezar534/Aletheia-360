@@ -293,6 +293,7 @@
 // };
 
 // export default RedemptivePlan;
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { planItems } from "../mock-data/mock";
@@ -308,7 +309,7 @@ const RedemptivePlan = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200">
+    <section className="py-16 px-4 bg-amber-50">
       <div className="max-w-5xl mx-auto">
         <Header />
 
@@ -336,15 +337,15 @@ const Header = () => (
     viewport={{ once: true }}
     className="text-center mb-20"
   >
-    <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6">
+    <h2 className="text-xl md:text-3xl font-bold text-amber-900 mb-6">
       <AnimatedHighlightedText text="God's Redemptive Plan" />
     </h2>
     <motion.p
       animate={{
         textShadow: [
-          "0 0 10px rgba(107, 114, 128, 0)",
-          "0 0 10px rgba(107, 114, 128, 0.3)",
-          "0 0 10px rgba(107, 114, 128, 0)",
+          "0 0 10px rgba(180, 83, 9, 0)",
+          "0 0 10px rgba(180, 83, 9, 0.4)",
+          "0 0 10px rgba(180, 83, 9, 0)",
         ],
       }}
       transition={{
@@ -352,7 +353,7 @@ const Header = () => (
         repeat: Infinity,
         ease: "easeInOut",
       }}
-      className="text-md text-gray-700 max-w-3xl mx-auto font-medium"
+      className="text-md text-amber-800 max-w-3xl mx-auto font-medium"
     >
       The beautiful story of God's love and salvation
     </motion.p>
@@ -396,24 +397,24 @@ const Card = ({ item, isHovered }: { item: item; isHovered: boolean }) => (
       animate={{
         scale: isHovered ? 1.05 : 1,
         boxShadow: isHovered
-          ? "0 25px 50px -12px rgba(107, 114, 128, 0.3)"
+          ? "0 25px 50px -12px rgba(146, 64, 14, 0.3)"
           : "0 4px 6px -1px rgba(0, 0, 0, 0.05)",
       }}
       transition={{ duration: 0.3 }}
-      className="p-1 bg-gradient-to-br from-gray-400 to-gray-300 rounded-2xl"
+      className="p-1 bg-gradient-to-br from-amber-400 to-amber-300 rounded-2xl"
     >
       <div className="bg-white rounded-xl p-6 h-full shadow-md">
         <motion.div
-          animate={{ color: isHovered ? "#6b7280" : "#374151" }}
+          animate={{ color: isHovered ? "#b45309" : "#92400e" }}
           transition={{ duration: 0.3 }}
           className="mb-6"
         >
           {item.icon}
         </motion.div>
-        <h3 className="text-xl md:text-1xl font-bold text-gray-900 mb-6">
+        <h3 className="text-xl md:text-1xl font-bold text-amber-900 mb-6">
           <AnimatedHighlightedText text={item.title} />
         </h3>
-        <p className="text-gray-600 text-xs leading-relaxed">
+        <p className="text-amber-800 text-xs leading-relaxed">
           {item.content.split(".").map((sentence, i, arr) => (
             <motion.span
               key={i}
@@ -442,43 +443,41 @@ const Video = ({
   isHovered: boolean;
 }) => (
   <div className="flex-1 w-full">
-    <motion.div
+    <motion.iframe
+      title={title}
+      src={`https://www.youtube.com/embed/${videoId}`}
+      className="w-full h-64 md:h-72 rounded-xl border-4 border-amber-200"
+      allowFullScreen
       animate={{
-        scale: isHovered ? 1.03 : 1,
-        boxShadow: isHovered
-          ? "0 25px 50px -12px rgba(107, 114, 128, 0.3)"
-          : "0 4px 6px -1px rgba(0, 0, 0, 0.05)",
+        borderColor: isHovered ? "#fcd34d" : "#fde68a",
       }}
       transition={{ duration: 0.3 }}
-      className="aspect-video bg-white rounded-xl overflow-hidden shadow-xl border-2 border-gray-100"
-    >
-      <iframe
-        className="w-full h-[300px]"
-        src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`}
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </motion.div>
+    />
   </div>
 );
 
+// You can reuse the AnimatedHighlightedText from your current design system
 const AnimatedHighlightedText = ({ text }: { text: string }) => (
-  <span className="relative inline-block">
-    <span className="relative z-10">{text}</span>
-    <motion.span
-      className="absolute bottom-0 left-0 w-full h-2 bg-gray-400 opacity-50"
-      animate={{
-        scaleX: [0, 1, 0],
-        left: [0, 0, "100%"],
-      }}
-      transition={{
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
+  <motion.span
+    animate={{
+      color: ["#92400e", "#b45309", "#92400e"],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="relative inline-block"
+  >
+    {text}
+    <motion.div
+      className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-amber-200"
+      initial={{ scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
+      transition={{ duration: 1.5, delay: 0.3 }}
+      viewport={{ once: true }}
     />
-  </span>
+  </motion.span>
 );
 
 export default RedemptivePlan;
