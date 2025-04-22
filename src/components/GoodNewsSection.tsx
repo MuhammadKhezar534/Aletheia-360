@@ -150,7 +150,7 @@ const GoodNewsSection = () => {
   return (
     <div
       ref={containerRef}
-      className="py-20 px-4 bg-gradient-to-b from-amber-50 via-rose-100 to-amber-100"
+      className="py-20 px-4 bg-gradient-to-b from-amber-50 via-amber-100 to-amber-100"
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="section-title text-1xl md:text-3xl font-bold text-center text-rose-700 mb-16">

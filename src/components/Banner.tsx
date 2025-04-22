@@ -368,7 +368,7 @@ import { WORDS } from "../mock-data/mock";
 import gsap from "gsap";
 import useModalContext from "../hooks/useModalContext";
 
-const NEUTRAL_BG = "#FFF4CA"; // Light amber-50 color
+const NEUTRAL_BG = "#FFF4CA";
 
 const AnimatedHeader = () => (
   <motion.div

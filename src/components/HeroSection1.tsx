@@ -132,10 +132,8 @@ const HeroSection = ({ onScrollClick }: Props) => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-amber-100 via-rose-100 to-amber-50 text-red-900">
-      {/* Background glow (light, not dark) */}
+    <div className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-amber-300 via-amber-200 to-amber-50 text-red-900">
       <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-transparent backdrop-blur-sm"></div>
-
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

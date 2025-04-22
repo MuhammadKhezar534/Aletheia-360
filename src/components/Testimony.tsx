@@ -213,7 +213,7 @@ const Testimony = ({
   return (
     <div
       ref={containerRef}
-      className="py-16 px-4 bg-gradient-to-b from-rose-50 via-amber-100 to-rose-100"
+      className="py-16 px-4 bg-gradient-to-b from-amber-50 via-amber-100 to-amber-100"
     >
       <div
         className={`max-w-4xl mx-auto flex flex-col ${

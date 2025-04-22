@@ -148,7 +148,7 @@ const PrayerContactSection = () => {
   return (
     <div
       ref={containerRef}
-      className="py-16 px-4 bg-gradient-to-b from-[#fde68a] via-[#fbcfe8] to-[#fca5a5]"
+      className="py-16 px-4 bg-gradient-to-b from-[#FFF4CA] via-[#FFF4CA] to-[#FFF4CA]"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
