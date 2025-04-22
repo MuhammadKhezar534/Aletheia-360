@@ -297,6 +297,13 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { planItems } from "../mock-data/mock";
 
+interface item {
+  title: string;
+  icon: JSX.Element;
+  content: string;
+  videoId: string;
+}
+
 const RedemptivePlan = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -358,7 +365,7 @@ const PlanItem = ({
   hoveredIndex,
   setHoveredIndex,
 }: {
-  item: unknown;
+  item: item;
   index: number;
   hoveredIndex: number | null;
   setHoveredIndex: (index: number | null) => void;
@@ -383,7 +390,7 @@ const PlanItem = ({
   );
 };
 
-const Card = ({ item, isHovered }: { item: unknown; isHovered: boolean }) => (
+const Card = ({ item, isHovered }: { item: item; isHovered: boolean }) => (
   <div className="flex-1 relative">
     <motion.div
       animate={{
