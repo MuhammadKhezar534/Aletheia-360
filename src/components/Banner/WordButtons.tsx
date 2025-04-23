@@ -19,19 +19,19 @@ const WordButtons = ({
         key={word.text}
         whileHover={{
           scale: 1.1,
-          backgroundColor: "rgba(180, 83, 9, 0.15)",
+          backgroundColor: "rgba(102, 137, 161, 0.15)",
           transition: { duration: 0.2 },
         }}
         whileTap={{ scale: 0.95 }}
         animate={{
           backgroundColor:
             currentIndex === index
-              ? "rgba(180, 83, 9, 0.25)"
-              : "rgba(254, 243, 199, 0.7)",
+              ? "rgba(102, 137, 161, 0.25)"
+              : "rgba(245, 247, 250, 0.7)",
           transition: { duration: 0.3 },
         }}
         onClick={() => setCurrentIndex(index)}
-        className="px-4 py-2 rounded-full text-sm text-amber-900 cursor-pointer border border-amber-200 hover:border-amber-300 transition-all shadow-sm"
+        className="px-4 py-2 rounded-full text-sm text-[#2D3748] cursor-pointer border border-[#E2E8F0] hover:border-[#A3B8C8] transition-all shadow-sm"
       >
         {word.text}
       </motion.button>

@@ -181,49 +181,49 @@ export const testimonies = [
 
 export const beliefs = [
   {
-    icon: <FaCross className="text-4xl text-yellow-400" />,
+    icon: <FaCross className="text-4xl text-[#6689A1]" />,
     title: "In One God",
     content:
       "We believe there is one God who created everything and is involved in our world. God exists as three distinct yet united persons: The Father, who lovingly rules over all creation; The Son, Jesus Christ, who gave His life to restore our relationship with God; The Holy Spirit, who helps us see our need for God and gives us power to live for Him.",
   },
   {
-    icon: <FaStar className="text-4xl text-yellow-400" />,
+    icon: <FaStar className="text-4xl text-[#6689A1]" />,
     title: "That Jesus Christ Is Lord",
     content:
       "We believe Jesus is both fully God and fully human. He was born of a virgin, lived without sin, died on a cross to bring us back to God, rose from the dead, and returned to heaven. Through trusting in Him, we receive forgiveness and a renewed relationship with God.",
   },
   {
-    icon: <FaBible className="text-4xl text-yellow-400" />,
+    icon: <FaBible className="text-4xl text-[#6689A1]" />,
     title: "In the Authority of the Bible",
     content:
       "We believe the Bible is God's true message for us. It reveals who God is, what He has done, and how we should live. We let the Bible guide all our beliefs and actions, relying on its wisdom for living in a way that honours God.",
   },
   {
-    icon: <FaChurch className="text-4xl text-yellow-400" />,
+    icon: <FaChurch className="text-4xl text-[#6689A1]" />,
     title: "In the Local Church",
     content:
       "We believe the local church is God's community: a gathering of people who follow Jesus. We come together to worship God, learn and grow spiritually, build each other up, and serve those around us.",
   },
   {
-    icon: <FaUserFriends className="text-4xl text-yellow-400" />,
+    icon: <FaUserFriends className="text-4xl text-[#6689A1]" />,
     title: "Humanity & Sin",
     content:
       "We believe all people are created in God's image, meaning we reflect something of God's nature. However, our choices to do wrong have separated us from God, and we need His help to heal that separation.",
   },
   {
-    icon: <FaHeart className="text-4xl text-yellow-400" />,
+    icon: <FaHeart className="text-4xl text-[#6689A1]" />,
     title: "Salvation",
     content:
       "We believe that our rescue from sin comes only from God's kindness (grace) through trusting in Jesus. Anyone who turns to Him receives new life, becomes part of God's family, and is guided by the Holy Spirit.",
   },
   {
-    icon: <FaHandsHelping className="text-4xl text-yellow-400" />,
+    icon: <FaHandsHelping className="text-4xl text-[#6689A1]" />,
     title: "Christian Living",
     content:
       "We believe God calls everyone who follows Him to live in a way that shows love, unity, and service. We do this by relying on the Holy Spirit's help and sharing Jesus' good news.",
   },
   {
-    icon: <FaGlobeAmericas className="text-4xl text-yellow-400" />,
+    icon: <FaGlobeAmericas className="text-4xl text-[#6689A1]" />,
     title: "Christ's Return & Eternity",
     content:
       "We believe Jesus will return one day in a way everyone will see. He will bring full justice and restore all things. Those who trust Him will live forever with God in perfect joy.",

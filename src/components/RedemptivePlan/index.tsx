@@ -7,7 +7,7 @@ const RedemptivePlan = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 px-4 bg-amber-50">
+    <section className="py-16 px-4 bg-[#E1EBF0]">
       <div className="max-w-5xl mx-auto">
         <Header />
 

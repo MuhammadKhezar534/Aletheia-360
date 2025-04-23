@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const CrossIcon = () => (
   <motion.div
-    className="absolute right-10 top-1/2 text-amber-300 opacity-60"
+    className="absolute right-10 top-1/2 text-[#A3B8C8] opacity-60"
     animate={{
       rotate: [0, 5, -5, 0],
       y: ["-50%", "-48%", "-52%", "-50%"],

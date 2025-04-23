@@ -54,10 +54,10 @@ const Video = ({
     <motion.iframe
       title={title}
       src={`https://www.youtube.com/embed/${videoId}`}
-      className="w-full h-64 md:h-72 rounded-xl border-4 border-amber-200"
+      className="w-full h-64 md:h-72 rounded-xl border-4 border-[#C1D4DD]"
       allowFullScreen
       animate={{
-        borderColor: isHovered ? "#fcd34d" : "#fde68a",
+        borderColor: isHovered ? "#7EA0B5" : "#C1D4DD",
       }}
       transition={{ duration: 0.3 }}
     />
@@ -70,24 +70,24 @@ const Card = ({ item, isHovered }: { item: item; isHovered: boolean }) => (
       animate={{
         scale: isHovered ? 1.05 : 1,
         boxShadow: isHovered
-          ? "0 25px 50px -12px rgba(146, 64, 14, 0.3)"
+          ? "0 25px 50px -12px rgba(102, 137, 161, 0.3)"
           : "0 4px 6px -1px rgba(0, 0, 0, 0.05)",
       }}
       transition={{ duration: 0.3 }}
-      className="p-1 bg-gradient-to-br from-amber-400 to-amber-300 rounded-2xl"
+      className="p-1 bg-gradient-to-br from-[#7EA0B5] to-[#A3B9C7] rounded-2xl"
     >
       <div className="bg-white rounded-xl p-6 h-full shadow-md">
         <motion.div
-          animate={{ color: isHovered ? "#b45309" : "#92400e" }}
+          animate={{ color: isHovered ? "#4A6E84" : "#334B59" }}
           transition={{ duration: 0.3 }}
           className="mb-6"
         >
           {item.icon}
         </motion.div>
-        <h3 className="text-xl md:text-1xl font-bold text-amber-900 mb-6">
+        <h3 className="text-xl md:text-1xl font-bold text-[#334B59] mb-6">
           <AnimatedHighlightedText text={item.title} />
         </h3>
-        <p className="text-amber-800 text-xs leading-relaxed">
+        <p className="text-[#4A6E84] text-xs leading-relaxed">
           {item.content.split(".").map((sentence, i, arr) => (
             <motion.span
               key={i}

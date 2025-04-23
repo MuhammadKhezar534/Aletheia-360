@@ -7,20 +7,20 @@ const AnimatedParagraph = () => (
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, staggerChildren: 0.1 }}
     viewport={{ once: true }}
-    className="text-lg md:text-xl text-amber-800 mb-12 leading-relaxed max-w-4xl mx-auto"
+    className="text-lg md:text-xl text-[#4A5568] mb-12 leading-relaxed max-w-4xl mx-auto"
   >
     <motion.p className="mb-6">
-      We're <AnimatedWord word="glad" colors={["#fcd34d", "#92400e"]} /> you're
+      We're <AnimatedWord word="glad" colors={["#A3B8C8", "#6689A1"]} /> you're
       here! This is a space to discover what makes the Gospel truly{" "}
-      <AnimatedWord word="Good News" colors={["#fcd34d", "#92400e"]} />.
+      <AnimatedWord word="Good News" colors={["#A3B8C8", "#6689A1"]} />.
     </motion.p>
     <motion.p className="mb-6">
       No matter your background or where you are on your{" "}
-      <AnimatedWord word="spiritual journey" colors={["#fcd34d", "#92400e"]} />,
+      <AnimatedWord word="spiritual journey" colors={["#A3B8C8", "#6689A1"]} />,
       we invite you to explore the{" "}
-      <AnimatedWord word="hope" colors={["#fcd34d", "#92400e"]} />,
-      <AnimatedWord word="forgiveness" colors={["#fcd34d", "#92400e"]} />, and{" "}
-      <AnimatedWord word="purpose" colors={["#fcd34d", "#92400e"]} /> Jesus
+      <AnimatedWord word="hope" colors={["#A3B8C8", "#6689A1"]} />,
+      <AnimatedWord word="forgiveness" colors={["#A3B8C8", "#6689A1"]} />, and{" "}
+      <AnimatedWord word="purpose" colors={["#A3B8C8", "#6689A1"]} /> Jesus
       offers.
     </motion.p>
     <motion.p>

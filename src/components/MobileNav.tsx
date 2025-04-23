@@ -21,7 +21,7 @@ const MobileNav = ({
   return (
     <Fragment>
       <motion.button
-        className="md:hidden text-2xl z-50 bg-white"
+        className="md:hidden text-2xl z-50 bg-white text-[#4E6B7D] p-2 rounded-lg shadow"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         whileTap={{ scale: 0.9 }}
       >
@@ -35,7 +35,7 @@ const MobileNav = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed inset-0 top-16 bg-amber-50/95 backdrop-blur-sm z-40 px-4 py-8 h-[100vh]"
+            className="md:hidden fixed inset-0 top-16 bg-[#D2DFE7]/95 backdrop-blur-sm z-40 px-4 py-8 h-[100vh]"
           >
             <div className="flex flex-col space-y-6">
               {links.map((link, index) => (
@@ -44,10 +44,10 @@ const MobileNav = ({
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className={`text-lg font-medium px-4 py-3 rounded-lg ${
+                  className={`text-lg font-medium px-4 py-3 rounded-lg transition-all cursor-pointer ${
                     activeLink === link.name
-                      ? "bg-amber-100 text-amber-700"
-                      : "text-amber-900 hover:bg-amber-100/50"
+                      ? "bg-[#A0B8C8] text-[#4E6B7D]"
+                      : "text-[#4E6B7D] hover:bg-[#B3C9D7]/50"
                   }`}
                   onClick={() => handleClick(link)}
                 >
@@ -63,7 +63,7 @@ const MobileNav = ({
                   setIsModalOpen(true);
                   setMobileMenuOpen(false);
                 }}
-                className="mt-8 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-full text-lg shadow-md hover:from-amber-600 hover:to-amber-700 transition-all"
+                className="mt-8 px-6 py-3 bg-[#6689A1] hover:bg-[#4E6B7D] text-white font-semibold rounded-full text-lg shadow-lg transition-all"
               >
                 Contact Us
               </motion.button>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const AnimatedHighlightedText = ({ text }: { text: string }) => (
   <motion.span
     animate={{
-      color: ["#92400e", "#b45309", "#92400e"],
+      color: ["#4A6E84", "#7EA0B5", "#4A6E84"],
     }}
     transition={{
       duration: 4,
@@ -14,7 +14,7 @@ const AnimatedHighlightedText = ({ text }: { text: string }) => (
   >
     {text}
     <motion.div
-      className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-amber-200"
+      className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#7EA0B5] to-[#C1D4DD]"
       initial={{ scaleX: 0 }}
       whileInView={{ scaleX: 1 }}
       transition={{ duration: 1.5, delay: 0.3 }}

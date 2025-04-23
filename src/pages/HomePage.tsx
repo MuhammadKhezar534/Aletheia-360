@@ -5,7 +5,7 @@ import LifeWithGod from "../components/LifeWithGod";
 
 const HomePage = () => {
   return (
-    <div className="bg-blue-950 text-white">
+    <div className="text-white">
       <Banner />
       <WelcomeSection />
       <RedemptivePlan />

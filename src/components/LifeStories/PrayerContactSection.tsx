@@ -44,23 +44,23 @@ const PrayerContactSection = () => {
   return (
     <div
       ref={containerRef}
-      className="py-16 px-4 bg-gradient-to-b from-[#FFF4CA] via-[#FFF4CA] to-[#FFF4CA]"
+      className="py-16 px-4 bg-gradient-to-b from-[#A0B8C8] via-[#D2DFE7] to-[#A0B8C8]"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
-          className="prayer-card bg-white/60 backdrop-blur-sm p-8 rounded-xl border border-white/30 mb-12 shadow-xl"
+          className="prayer-card bg-white/60 backdrop-blur-sm p-8 rounded-xl border border-[#B3C9D7] mb-12 shadow-xl"
           whileHover={{ y: -5 }}
         >
-          <h3 className="text-2xl font-bold text-[#7c2d12] mb-6 text-center">
+          <h3 className="text-2xl font-bold text-[#4E6B7D] mb-6 text-center">
             A Simple Prayer
           </h3>
-          <p className="text-[#7c2d12] mb-6 italic text-center text-sm">
+          <p className="text-[#4E6B7D] mb-6 italic text-center text-sm">
             If you sense God stirring your heart and you're ready to begin (or
             rekindle) a relationship with Him, you can pray something like this
             in your own words:
           </p>
-          <div className="bg-white/70 p-6 rounded-lg border-l-4 border-[#f87171]">
-            <p className="text-[#7c2d12] leading-relaxed text-sm">
+          <div className="bg-white/70 p-6 rounded-lg border-l-4 border-[#6689A1]">
+            <p className="text-[#4E6B7D] leading-relaxed text-sm">
               "God, I admit that I've sinned and turned away from You. Thank You
               for sending Jesus to die on the cross for my sins and for offering
               me forgiveness. Right now, I choose to turn from my old ways and
@@ -72,13 +72,13 @@ const PrayerContactSection = () => {
         </motion.div>
 
         <motion.div
-          className="contact-card bg-white/50 backdrop-blur-md p-8 rounded-xl border border-[#fca5a5] text-center shadow-lg"
+          className="contact-card bg-white/50 backdrop-blur-md p-8 rounded-xl border border-[#B3C9D7] text-center shadow-lg"
           whileHover={{ scale: 1.02 }}
         >
-          <h3 className="text-xl font-bold text-[#7c2d12] mb-4">
+          <h3 className="text-xl font-bold text-[#4E6B7D] mb-4">
             Want to Talk or Need Prayer?
           </h3>
-          <p className="text-[#7c2d12] mb-6 text-sm">
+          <p className="text-[#4E6B7D] mb-6 text-sm">
             We'd love to connect with you. Whether you have questions, need
             prayer, or just want to share what's on your heart, we're here to
             listen and help.
@@ -87,7 +87,7 @@ const PrayerContactSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsModalOpen(true)}
-            className="px-6 py-2 text-sm bg-[#f87171] hover:bg-[#ef4444] text-white font-semibold rounded-lg"
+            className="px-6 py-2 text-sm bg-[#6689A1] hover:bg-[#4E6B7D] text-white font-semibold rounded-lg"
           >
             Contact Us
           </motion.button>

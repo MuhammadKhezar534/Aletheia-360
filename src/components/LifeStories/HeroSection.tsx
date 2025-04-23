@@ -17,16 +17,16 @@ const HeroSection = ({ onScrollClick }: Props) => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-amber-300 via-amber-200 to-amber-50 text-red-900">
+    <div className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-[#D9E4EA] via-[#C5D6DF] to-[#A3C2D3] text-[#334955]">
       <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-transparent backdrop-blur-sm"></div>
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-rose-700 mb-6"
+          className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#334955] mb-6"
         >
-          Life Stories: <span className="text-amber-600">Real People</span>
+          Life Stories: <span className="text-[#89AFC1]">Real People</span>
         </motion.h1>
 
         <motion.div
@@ -35,12 +35,12 @@ const HeroSection = ({ onScrollClick }: Props) => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mb-12"
         >
-          <h2 className="text-1xl md:text-2xl font-bold text-rose-600 mb-4">
+          <h2 className="text-1xl md:text-2xl font-bold text-[#4A5F6B] mb-4">
             Discover{" "}
-            <span className="text-amber-700">{words[currentWordIndex]}</span> in
+            <span className="text-[#89AFC1]">{words[currentWordIndex]}</span> in
             Christ
           </h2>
-          <p className="text-md md:text-lg text-rose-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md md:text-lg text-[#6E8794] max-w-3xl mx-auto leading-relaxed">
             We're glad you're here. Meet people who've experienced how Jesus
             brings healing and purpose even in life's toughest challenges.
           </p>
@@ -54,31 +54,24 @@ const HeroSection = ({ onScrollClick }: Props) => {
         >
           <HeroButton
             onClick={onScrollClick}
-            bgColor="bg-rose-600"
-            hoverColor="hover:bg-rose-700"
+            bgColor="bg-[#4A5F6B]"
+            hoverColor="hover:bg-[#3A4D58]"
             textColor="text-white"
             label="Watch Stories"
           />
           <HeroButton
-            bgColor="bg-white border border-amber-400"
-            hoverColor="hover:bg-amber-100"
-            textColor="text-rose-700"
+            bgColor="bg-white border border-[#A3C2D3]"
+            hoverColor="hover:bg-[#EAF0F4]"
+            textColor="text-[#334955]"
             label="Learn More"
           />
         </motion.div>
       </div>
 
       <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-amber-400 opacity-60"
-        animate={{
-          y: [0, -20, 0],
-          opacity: [0.4, 0.7, 0.4],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-[#A3C2D3] opacity-60"
+        animate={{ y: [0, -20, 0], opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

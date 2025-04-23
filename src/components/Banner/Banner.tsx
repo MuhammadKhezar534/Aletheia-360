@@ -9,8 +9,6 @@ import WordDisplay from "./WordDisplay";
 import WordButtons from "./WordButtons";
 import ContactButton from "./ContactButton";
 
-const NEUTRAL_BG = "#FFF4CA";
-
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const bannerRef = useRef<HTMLDivElement>(null);
@@ -50,10 +48,7 @@ const Banner = () => {
   return (
     <div
       ref={bannerRef}
-      className="w-full min-h-screen flex items-center justify-center relative overflow-hidden py-20 px-4 text-center"
-      style={{
-        backgroundColor: NEUTRAL_BG,
-      }}
+      className="w-full min-h-screen flex items-center justify-center relative overflow-hidden py-20 px-4 text-center bg-gradient-to-b from-[#D9E4EA] via-[#C5D6DF] to-[#A3C2D3]"
     >
       <div className="relative z-10 max-w-6xl mx-auto">
         <AnimatedHeader />

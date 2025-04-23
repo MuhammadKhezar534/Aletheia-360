@@ -11,7 +11,7 @@ const LifeWithGod = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-24 px-4 bg-gradient-to-b from-amber-50 via-amber-100 to-amber-50"
+      className="py-24 px-4 bg-gradient-to-b from-[#e0e9ef] via-[#d2dee7] to-[#e0e9ef]"
     >
       <div className="max-w-4xl mx-auto">
         <HeaderSection />

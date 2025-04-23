@@ -14,7 +14,7 @@ const WelcomeSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-20 px-4 bg-amber-50"
+      className="py-20 px-4 bg-[#F5F7FA]"
     >
       <div className="max-w-5xl mx-auto text-center">
         <AnimatedHeading controls={controls} />

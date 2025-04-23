@@ -7,7 +7,7 @@ const AboutUsPage = () => {
   const { setIsModalOpen } = useModalContext();
 
   return (
-    <div className="bg-amber-50 text-amber-900">
+    <div className="bg-gradient-to-b from-[#C5D6DF] via-[#D9E4EA] to-[#A3C2D3]">
       <HeroSection onContactClick={() => setIsModalOpen(true)} />
       <CoreBeliefsSection />
       <LearnMoreSection />

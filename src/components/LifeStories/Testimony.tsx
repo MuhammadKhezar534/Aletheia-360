@@ -78,7 +78,7 @@ const Testimony = ({
   return (
     <div
       ref={containerRef}
-      className="py-16 px-4 bg-gradient-to-b from-amber-50 via-amber-100 to-amber-100"
+      className="py-16 px-4 bg-gradient-to-b from-[#A0B8C8] via-[#D2DFE7] to-[#A0B8C8]"
     >
       <div
         className={`max-w-4xl mx-auto flex flex-col ${
@@ -91,7 +91,7 @@ const Testimony = ({
         >
           <motion.div
             animate={{
-              color: ["#be123c", "#b45309", "#be123c"],
+              color: ["#6689A1", "#4E6B7D", "#6689A1"],
             }}
             transition={{
               duration: 4,
@@ -102,21 +102,21 @@ const Testimony = ({
           >
             {title}
           </motion.div>
-          <p className="text-rose-700 text-sm leading-relaxed mb-6">
+          <p className="text-[#4E6B7D] text-sm leading-relaxed mb-6">
             {synopsis}
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleStory}
-            className="px-4 py-2 text-sm bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg shadow-md transition"
+            className="px-4 py-2 text-sm bg-[#6689A1] hover:bg-[#4E6B7D] text-white font-semibold rounded-lg shadow-md transition"
           >
             Watch {name}'s Video
           </motion.button>
         </motion.div>
 
         <div
-          className={`testimony-video-${name} flex-1 w-full aspect-video bg-white rounded-xl overflow-hidden shadow-lg border border-amber-200`}
+          className={`testimony-video-${name} flex-1 w-full aspect-video bg-white rounded-xl overflow-hidden shadow-lg border border-[#B3C9D7]`}
         >
           <iframe
             className="w-full h-[270px]"

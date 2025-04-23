@@ -10,7 +10,7 @@ const WordDisplay = ({ currentIndex }: { currentIndex: number }) => (
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -30 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="text-2xl md:text-4xl font-bold text-amber-900 mb-4"
+        className="text-2xl md:text-4xl font-bold text-[#2D3748] mb-4"
       >
         {WORDS[currentIndex].text}
       </motion.div>
