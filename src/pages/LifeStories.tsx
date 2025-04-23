@@ -12,7 +12,7 @@ const LifeStories = () => {
     targetRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="bg-[#6689A1] text-white">
+    <div className="bg-[#C5D6DF] text-white">
       <div>
         <HeroSection onScrollClick={handleScroll} />
       </div>
