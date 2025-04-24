@@ -4,7 +4,7 @@ import LifeStories from "./pages/LifeStories";
 import Navbar from "./components/Navbar";
 import About from "./components/AboutUs";
 import { createContext, Dispatch, SetStateAction, useState } from "react";
-import ContactModal from "./components/ContactModal";
+import ContactModal from "./ContactForm/ContactModal";
 
 export interface ThemeContextType {
   isModalOpen: boolean;

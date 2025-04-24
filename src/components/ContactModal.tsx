@@ -2,6 +2,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaTimes, FaUser, FaEnvelope, FaComment } from "react-icons/fa";
 
+const url =
+  "https://script.google.com/macros/s/AKfycbzISGZG8jHyQuNfh7lC7GrLeQ7iBv8GnYVRDfjhHYdjTEUrzXLiZLXY8tUO_yK_lLZr/exec";
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -24,10 +26,25 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    onClose();
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log({ response });
+      onClose();
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
